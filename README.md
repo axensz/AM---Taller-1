@@ -1,4 +1,4 @@
-# Taller #1 - Grupo Viernes 2 a 5:20
+# Taller #1
 
 ## Integrantes
 - Mkclaren Tobar
