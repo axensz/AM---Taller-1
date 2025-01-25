@@ -57,14 +57,8 @@ El taller se desarrollará en varias etapas con diferentes entregables y criteri
 ---
 
 ### 4. Exposición de Conceptos de JavaScript
-**Descripción:** Preparar una explicación y diapositivas sobre uno de los conceptos asignados en clase:
-- **apply, call, and bind methods**
-- **Modules**
-- **Memoization**
-- **IIFE**
+**Descripción:** Preparar una explicación y diapositivas sobre uno del conceptos asignado en clase:
 - **Argument features**
-- **async/await**
-- **Event loop**
 
 **Instrucciones:**
 - Crear una carpeta `conceptos/` y subir las diapositivas.
