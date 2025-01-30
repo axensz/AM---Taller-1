@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardew Valley</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Primer Header -->
+<header class="header-top">
+    <div class="logo-search">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search" class="search-bar">
+            <div class="custom-select">
+                <span id="category-label">All Categories</span>
+                <i class="fas fa-chevron-down"></i>
+                <ul class="dropdown" id="dropdown-list">
+                    <li onclick="selectCategory(this)">Games</li>
+                    <li onclick="selectCategory(this)">Hardware</li>
+                    <li onclick="selectCategory(this)">Merchandise</li>
+                    <li onclick="selectCategory(this)">News & Events</li>
+                    <li onclick="selectCategory(this)">Support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-links">
+        <span><i class="fas fa-life-ring"></i> Support</span>
+        <span><i class="fas fa-heart"></i> Wish List</span>
+        <span><i class="fas fa-shopping-cart"></i> Cart</span>
+        <span><i class="fas fa-user"></i> Log In / Sign Up</span>
+    </div>
+</header>
+
+    <!-- Segundo Header -->
+    <header class="header-middle">
+        <nav>
+            <ul>
+                <li><i class="fas fa-store"></i> My Nintendo Store</li>
+                <li><i class="fas fa-gamepad"></i> Games</li>
+                <li><i class="fas fa-laptop"></i> Nintendo Switch</li>
+                <li><i class="fas fa-newspaper"></i> News & Events</li>
+                <li><i class="fas fa-play"></i> Play Nintendo</li>
+                <li><i class="fas fa-play"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tercer Header -->
+    <header class="header-bottom">
+        <p>
+            <i class="fas fa-truck"></i> Free shipping on orders $50 or more.
+            <span class="highlight">Restrictions apply.</span>
+            <span class="divider"></span>
+            <i class="fas fa-coins"></i> Earn My Nintendo Points on digital games
+        </p>
+    </header>
+    
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos generales */
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ─────────────── PRIMER HEADER ─────────────── */
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo y buscador */
+.logo-search {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Contenedor del buscador */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    position: relative;
+    border-bottom: 2px solid black;
+    padding: 5px 0;
+}
+
+/* Icono de la lupa */
+.search-container i.fa-search {
+    margin-right: 8px;
+    color: gray;
+}
+
+/* Input del buscador */
+.search-bar {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 14px;
+    background: transparent;
+}
+
+/* Select personalizado */
+.custom-select {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 10px;
+    white-space: nowrap;  /* Evita que el texto se divida en dos líneas */
+}
+
+.custom-select i {
+    margin-left: 5px;
+}
+
+/* Dropdown oculto */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.dropdown li {
+    padding: 8px;
+    cursor: pointer;
+    color: #434242;
+}
+
+.dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar el dropdown cuando se haga clic */
+.dropdown.show {
+    display: block;
+}
+
+/* Enlaces del primer header */
+.header-links {
+    display: flex;
+    gap: 15px;
+}
+
+.header-links span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #434242;
+}
+
+/* ─────────────── SEGUNDO HEADER ─────────────── */
+.header-middle {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-middle ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-middle li {
+    color: #434242;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ─────────────── TERCER HEADER ─────────────── */
+.header-bottom {
+    width: 100%;
+    background-color: #efefef;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-bottom p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #434242;
+}
+
+/* Línea divisoria */
+.divider {
+    width: 2px;
+    height: 20px;
+    background-color: black;
+    margin: 0 10px;
+}
+
+/* Estilos para los iconos */
+.header-bottom i {
+    font-size: 16px;
+}
