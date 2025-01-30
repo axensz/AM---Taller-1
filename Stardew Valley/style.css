@@ -173,3 +173,120 @@ body {
 .header-bottom i {
     font-size: 16px;
 }
+
+/* Contenedor general con fondo azul */
+.section-container {
+    width: 100vw;  
+    height: 75vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d6f0fa;
+    position: relative; /* Permite que los elementos hijos usen absolute */
+    overflow: visible; /* Permite que el rectángulo sobresalga */
+}
+
+/* Rectángulo flotante */
+.rounded-rectangle {
+    width: 80vw;
+    max-width: 100%;
+    height: 540px;
+    max-height: 75vh;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -50px; /* Mueve el rectángulo hacia abajo */
+    left: 50%; /* Lo mueve al centro de la pantalla */
+    transform: translateX(-50%); /* Lo ajusta para que quede perfectamente centrado */
+}
+
+
+/* Contenedor principal con fondo blanco */
+.content-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-top: 100px; /* Espacio extra para evitar que el contenido suba demasiado */
+}
+
+
+/* Contenedor interno con dos columnas */
+.content-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+
+/* Columna izquierda: Texto, enlace y botón */
+.text-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 200px;
+}
+
+/* Texto */
+.text-column p {
+    font-size: 14px;
+    color: #333;
+}
+
+.tecxt-column p #pmini {
+    font-size: 2px;
+    color: #a2a2a2;
+}
+
+/* Estilo del enlace */
+.link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+/* Botón rojo */
+.red-button {
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.red-button:hover {
+    background-color: darkred;
+}
+
+/* Columna derecha: Imagen */
+.image-column {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;;
+}
+
+/* Imagen */
+.game-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
