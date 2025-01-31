@@ -19,7 +19,7 @@ setInterval(() => {
 
 // Reproduce un sonido al hacer clic en los objetos
 function playSound() {
-  const sound = new Audio("https://www.fesliyanstudios.com/play-mp3/387"); // Sonido de clic
+  const sound = new Audio("https://res.cloudinary.com/dhh0xpin6/video/upload/f_auto:video,q_auto/sc0qsdghjb1mpq35kfme"); // Sonido de clic
   sound.play();
 }
 
