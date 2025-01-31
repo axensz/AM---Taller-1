@@ -648,10 +648,10 @@ body {
 /***********************************************/
 footer {
     background-color: #f2f2f2;
-    padding: 20px;
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    margin: 0; /* Elimina cualquier margen */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -663,10 +663,12 @@ footer {
     padding: 20px 20px;
     margin: 0;
     width: 100%; /* Ocupa todo el ancho disponible */
+    height: 100px;
 }
 
 .nintendo_footer_rojo .nintendo_logo {
-    height: 100px; /* Ajusta el tamaño del logo */
+    height: 70px; /* Ajusta el tamaño del logo */
+    margin-left: 50px;
 }
 
 .nintendo_footer_rojo img:not(.nintendo_logo) {
@@ -677,7 +679,26 @@ footer {
 /* Contenedor para los íconos de redes sociales */
 .redes_sociales {
     display: flex;
-    gap: 15px; /* Espacio entre los íconos */
+    gap: 40px; /* Espacio entre los íconos */
+    padding-right: 100px; /* Añade un poco de espacio a la derecha para evitar que el último logo esté tan pegado al borde */
+
+}
+
+.redes_sociales span svg {
+    width: 30px; /* Aumenta el tamaño de los íconos */
+    height: 30px;
+    fill: #ffffff; /* Color blanco */
+    margin-right: 20px; /* Espaciado entre los íconos */
+    transition: fill 0.3s ease-in-out;
+}
+
+/* Asegúrate de que el último ícono no tenga margen derecho */
+.redes_sociales span:last-child svg {
+    margin-right: 0;
+}
+
+.redes_sociales span:hover svg {
+    fill: #ffcc00; /* Cambia de color a dorado al pasar el mouse */
 }
 
 .menu_footer h3{
@@ -730,6 +751,8 @@ footer {
     background-color: #333;
     color: #ddd;
     padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
     font-size: 11px;
     display: flex; /* Usamos flexbox */
     align-items: center; /* Alineamos verticalmente al centro */
