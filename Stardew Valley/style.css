@@ -431,3 +431,198 @@ body {
     margin: 0;
     text-align: center;
 }
+
+/***********************************************/
+/***********************************************/
+/* parte de camilo/
+/***********************************************/
+/***********************************************/
+
+
+/***********************************************/
+/***********************************************/
+/*Estilos para el rectangulo "rectangle online"*/
+/***********************************************/
+/***********************************************/
+.rectangle_online {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    max-width: 800px; /* Aumenté el ancho para acomodar la imagen a la derecha */
+    text-align: left;
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al principio del eje transversal (arriba) */
+    width: 800;
+}
+
+.rectangle_online img:first-of-type {
+    width: 100px;
+    margin-bottom: 20px;
+    align-self: flex-start; /* Alinea la imagen del logo a la izquierda */
+}
+
+.rectangle_online .text-content {
+    display: flex;
+    flex-direction: column; /* Apila los elementos (p, a, button) verticalmente */
+    justify-content: flex-start;
+    flex-grow: 1; /* Esto asegura que ocupe el espacio disponible */
+}
+
+.rectangle_online p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.rectangle_online p a {
+    color: #e60012;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rectangle_online p a:hover {
+    text-decoration: underline;
+}
+
+.rectangle_online button {
+    background-color: #E60012;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.rectangle_online button:hover {
+    background-color: #cc0011;
+}
+
+/* Solo aplica a las imágenes dentro de 'text-content' */
+.rectangle_online .text-content img {
+    width: 250px;
+    align-self: flex-start;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+/* Aplica a la imagen con clase 'mando' */
+/* Aplica específicamente solo a la imagen con la clase 'mando' */
+.rectangle_online .mando {
+    width: 100px !important; /* Tamaño ajustado de la imagen */
+    align-self: flex-start;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+
+/***********************************************/
+/***********************************************/
+/***********    Estilos Warning    **************/
+/***********************************************/
+/***********************************************/
+
+.warning {
+    color:#838383;
+    font-size: 12px;
+    width: 1200px;
+    padding: 50px;
+}
+
+
+/***********************************************/
+/***********************************************/
+/***********    Estilos Footer    **************/
+/***********************************************/
+/***********************************************/
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.nintendo_footer {
+    display: grid; /* Usamos grid para organizar los divs */
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales para los primeros divs */
+    grid-gap: 20px; /* Espacio entre los divs */
+    margin: 0 auto;
+    width: 90%;
+}
+
+.nintendo_footer .rojo {
+    background-color: #cc0011;
+}
+
+.menu_footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas para los primeros divs */
+    grid-gap: 20px;
+}
+
+.about_nintendo,
+.shop,
+.orders,
+.support {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.parents {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    grid-column: span 2; /* Hace que este div ocupe dos columnas */
+}
+
+.community {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    grid-column: span 2; /* Hace que este div ocupe dos columnas */
+}
+
+.Privacy {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    grid-column: span 2; /* Hace que este div ocupe dos columnas */
+}
+
+.documents_policies {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    grid-column: span 4; /* Hace que este div ocupe las 4 columnas */
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul a {
+    text-decoration: none;
+    color: #e60012; /* Color de los enlaces */
+}
+
+ul a:hover {
+    text-decoration: underline;
+    color: #cc0011; /* Color más oscuro al pasar el cursor */
+}
+
+
+
+
+
+
+
