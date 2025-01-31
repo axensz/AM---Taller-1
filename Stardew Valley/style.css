@@ -870,3 +870,11 @@ footer {
 .menu_footer > div:not(:first-child) {
     padding-left: 20px; /* Espacio para la barra */
 }
+
+/*Bandera footer*/
+.flag-icon2 {
+    width: 24px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción */
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+    margin-right: -100px;
+}
