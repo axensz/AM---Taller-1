@@ -93,7 +93,7 @@ body {
 
 #category-label{
     margin-right: 10px;
-    color: #E60012;
+    color: #434242;
 }
 
 #chevron-down{
@@ -121,6 +121,12 @@ body {
     display: block;
 }
 
+/* Estilos para la imagen de la bandera */
+.flag-icon {
+    width: 24px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción */
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+}
 
 
 /* Enlaces del primer header */
@@ -129,13 +135,23 @@ body {
     gap: 25px;
 }
 
+/* Estilo normal para los enlaces del header */
 .header-links span {
+    color: #434242;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #434242;
+    gap: 5px; /* Espacio entre el icono y el texto */
+    transition: color 0.3s ease;
+}
+
+/* Color al pasar el mouse */
+.header-links span:hover {
+    color: #E60012;
+}
+
+.header-links span:hover svg {
+    fill: #E60012;
 }
 
 /* ─────────────── SEGUNDO HEADER ─────────────── */
