@@ -606,7 +606,10 @@ footer {
     gap: 15px; /* Espacio entre los íconos */
 }
 
-
+.menu_footer h3{
+    color: #434242;
+    margin-bottom: 20px;
+}
 .menu_footer {
     display: flex; /* Coloca los divs en una fila */
     justify-content: space-between; /* Distribuye el espacio entre ellos */
@@ -626,23 +629,51 @@ footer {
     border-right: 2px solid #ccc; /* Línea gris entre cada div */
 }
 
-/* Elimina la línea gris del último div para que no haya borde a la derecha */
-.menu_footer > div:last-child {
-    border-right: none;
+
+.menu_footer ul li {
+    margin-bottom: 8px; /* Agrega espacio entre los enlaces */
+    list-style: none;
 }
 
-/* Estilos de los enlaces */
-ul {
-    list-style-type: none;
-    padding-left: 0;
+.menu_footer a {
+    color: #e60012; /* Color inicial */
+    text-decoration: none; /* Sin subrayado por defecto */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Efecto suave */
 }
 
-ul a {
+.menu_footer a:hover {
+    color: #b3000e; /* Color más oscuro al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.nintendo_footer .esbr-footer{
+    width: 60px;
+    float: right;
+    margin: 50px;
+}
+
+.nintendo_footer .footer-inferior {
+    background-color: #333;
+    color: #ddd;
+    padding: 10px;
+    font-size: 11px;
+    display: flex; /* Usamos flexbox */
+    align-items: center; /* Alineamos verticalmente al centro */
+    justify-content: space-between; /* Distribuimos el espacio entre el párrafo y las listas */
+    width: 100%;
+}
+
+.nintendo_footer .footer-inferior ul {
+    color: #ddd;
+    padding: 10px;
+    font-size: 13px;
+    display: inline-block;
+    margin: 0; /* Elimina el margen por defecto en listas */
+}
+
+.nintendo_footer .footer-inferior ul a {
+    color: #ddd;
     text-decoration: none;
-    color: #e60012; /* Color original */
+    font-size: 11px;
 }
 
-ul a:hover {
-    text-decoration: underline;
-    color: #cc0011; /* Color más oscuro al pasar el cursor */
-}
