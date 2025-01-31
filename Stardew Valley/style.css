@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 /* ─────────────── PRIMER HEADER ─────────────── */
@@ -87,11 +88,12 @@ body {
 
 /* Select personalizado */
 .custom-select {
+    position: relative; /* Para que el dropdown se posicione con respecto a este elemento */
     display: flex;
     align-items: center;
     cursor: pointer;
     padding-left: 10px;
-    white-space: nowrap;  /* Evita que el texto se divida en dos líneas */
+    white-space: nowrap;
 }
 
 .custom-select i {
@@ -102,8 +104,8 @@ body {
 .dropdown {
     display: none;
     position: absolute;
-    top: 30px;
-    right: 0;
+    top: 100%;  /* Lo coloca justo debajo del .custom-select */
+    left: 0;  /* Alinea el menú con el selector */
     background-color: white;
     border: 1px solid #ccc;
     width: 150px;
@@ -229,7 +231,7 @@ body {
 }
 
 
-/* 🔹 Estilos generales del tercer header */
+/* 🔹                                           Estilos generales del tercer header */
 .header-bottom {
     background-color: #f8f8f8;
     padding: 10px 0;
@@ -262,15 +264,6 @@ body {
 .header-bottom .info-bar .hover-link:hover {
     color: #E60012;
     text-decoration: underline;
-}
-
-/* 🔴 Hover: cambia de color el texto y los íconos */
-.header-bottom .info-bar span:hover {
-    color: #E60012;
-}
-
-.header-bottom .info-bar span:hover svg {
-    fill: #E60012;
 }
 
 /* 🔹 Negrita para los textos requeridos */
@@ -310,6 +303,13 @@ body {
     transform: translateX(-50%); /* Lo ajusta para que quede perfectamente centrado */
 }
 
+/* Estilos para la imagen que ocupa todo el contenedor */
+.full-width-image {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 100%; /* Ocupa el 100% de la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio sin distorsionarla */
+    border-radius: 20px; /* Mantiene los bordes redondeados del contenedor */
+}
 
 /* Contenedor principal con fondo blanco */
 .content-wrapper {
