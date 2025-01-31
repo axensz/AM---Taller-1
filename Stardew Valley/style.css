@@ -512,8 +512,8 @@ body {
 
 /* Aplica a la imagen con clase 'mando' */
 /* Aplica específicamente solo a la imagen con la clase 'mando' */
-.rectangle_online .mando {
-    width: 100px !important; /* Tamaño ajustado de la imagen */
+.rectangle_online img:no(.nintendo_online) {
+    width: 600px !important; /* Tamaño ajustado de la imagen */
     align-self: flex-start;
     margin-left: 20px;
     border-radius: 10px;
@@ -542,69 +542,63 @@ body {
 footer {
     background-color: #f2f2f2;
     padding: 20px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin: 0; /* Elimina cualquier margen */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
 }
 
-.nintendo_footer {
-    display: grid; /* Usamos grid para organizar los divs */
-    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales para los primeros divs */
-    grid-gap: 20px; /* Espacio entre los divs */
-    margin: 0 auto;
-    width: 90%;
+
+.nintendo_footer_rojo {
+    display: flex; /* Activa flexbox para distribuir los elementos */
+    align-items: center; /* Centra verticalmente los íconos */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    background-color: #E60012;
+    padding: 20px 20px;
+    margin: 0;
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
-.nintendo_footer .rojo {
-    background-color: #cc0011;
+.nintendo_footer_rojo .nintendo_logo {
+    height: 100px; /* Ajusta el tamaño del logo */
 }
+
+.nintendo_footer_rojo img:not(.nintendo_logo) {
+    height: 30px; /* Ajusta solo los iconos de redes sociales */
+}
+
+
+/* Contenedor para los íconos de redes sociales */
+.redes_sociales {
+    display: flex;
+    gap: 15px; /* Espacio entre los íconos */
+}
+
 
 .menu_footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas para los primeros divs */
-    grid-gap: 20px;
+    display: flex; /* Coloca los divs en una fila */
+    justify-content: space-between; /* Distribuye el espacio entre ellos */
+    flex-wrap: wrap; /* Permite que se acomoden si no caben en una línea */
+    width: 100%;
+    
+    border-top: 2px solid #ccc; /* Línea superior gris */
 }
 
-.about_nintendo,
-.shop,
-.orders,
-.support {
+.menu_footer > div {
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
+    flex: 1; /* Hace que todos los divs ocupen el mismo espacio */
+    min-width: 150px; /* Evita que los divs sean demasiado pequeños */
+    text-align: left;
+    border-right: 2px solid #ccc; /* Línea gris entre cada div */
 }
 
-.parents {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    grid-column: span 2; /* Hace que este div ocupe dos columnas */
+/* Elimina la línea gris del último div para que no haya borde a la derecha */
+.menu_footer > div:last-child {
+    border-right: none;
 }
 
-.community {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    grid-column: span 2; /* Hace que este div ocupe dos columnas */
-}
-
-.Privacy {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    grid-column: span 2; /* Hace que este div ocupe dos columnas */
-}
-
-.documents_policies {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    grid-column: span 4; /* Hace que este div ocupe las 4 columnas */
-}
-
-h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #333;
-}
-
+/* Estilos de los enlaces */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -612,17 +606,10 @@ ul {
 
 ul a {
     text-decoration: none;
-    color: #e60012; /* Color de los enlaces */
+    color: #e60012; /* Color original */
 }
 
 ul a:hover {
     text-decoration: underline;
     color: #cc0011; /* Color más oscuro al pasar el cursor */
 }
-
-
-
-
-
-
-
