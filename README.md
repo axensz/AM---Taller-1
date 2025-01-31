@@ -18,7 +18,6 @@ El taller se desarrollará en varias etapas con diferentes entregables y criteri
 **Instrucciones:**
 - Crear una rama llamada `css`.
 - Subir las evidencias de los retos desarrollados a la rama.
-
 ---
 
 ### 2. Retos de JavaScript
@@ -30,19 +29,15 @@ El taller se desarrollará en varias etapas con diferentes entregables y criteri
 
 **Instrucciones:**
 - Crear una rama llamada `reto`.
-- Subir las evidencias en carpetas organizadas:
-  - `anim/` para la animación.
-  - `texto/` para el campo de texto.
+- Subir las evidencias.
 
 **Referencias de apoyo:**
 - Curso visto en clase.
 - Material complementario de animación y sonido.
-
 ---
 
 ### 3. Diagrama de Clases (UML)
-**Descripción:** Crear un diagrama de clases que represente un modelo de sistema para una cartelera de películas.
-
+**Descripción:** Realizar el diagrama de clase usando UML el modelo del sistema que represente los conceptos de una pelicula de cartelera. Se debe realizar el diseño en hoja de papel, tablero, tablet, usando una ténica de mano alzada para crear un primer borrador, luego se debe digitalizar el diagrama usando starUML. Debe incluir relaciones de herencia, interfaces, clases abstractas, constantes, relaciones entre clases, constructores, sobrecarga, polimorfismo.
 **Etapas:**
 1. **Borrador manual**: Diseñar el diagrama a mano en hoja de papel, tablero o tablet.
 2. **Digitalización**: Usar [StarUML](https://staruml.io/) para digitalizar el diagrama.
