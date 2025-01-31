@@ -174,7 +174,7 @@ body {
     font-size: 16px;
 }
 
-/* Contenedor general con fondo azul */
+/*                                         Contenedor general con fondo azul */
 .section-container {
     width: 100vw;  
     height: 75vh; 
@@ -199,7 +199,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -50px; /* Mueve el rectángulo hacia abajo */
+    bottom: -30px; /* Mueve el rectángulo hacia abajo */
     left: 50%; /* Lo mueve al centro de la pantalla */
     transform: translateX(-50%); /* Lo ajusta para que quede perfectamente centrado */
 }
@@ -216,14 +216,17 @@ body {
 }
 
 
-/* Contenedor interno con dos columnas */
+/*                                      Contenedor interno con dos columnas */
 .content-container {
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
     width: 90%;
     height: 100%;
+    gap: 20px; /* Espacio entre columnas */
+    min-height: 350px; /* Ajusta este valor según lo que necesites */
 }
 
 /* Columna izquierda: Texto, enlace y botón */
@@ -234,6 +237,13 @@ body {
     justify-content: center;
     gap: 15px;
     padding-left: 200px;
+    min-height: 250px; /* Ajusta según el tamaño de tu contenido */
+    overflow: hidden;
+}
+
+/* Titulo */
+.text-column h3 {
+    font-size: 27px;
 }
 
 /* Texto */
@@ -242,9 +252,9 @@ body {
     color: #333;
 }
 
-.tecxt-column p #pmini {
-    font-size: 2px;
-    color: #a2a2a2;
+.text-column #pmini {
+    font-size: 13px;
+    color: #484848;
 }
 
 /* Estilo del enlace */
@@ -260,7 +270,7 @@ body {
 
 /* Botón rojo */
 .red-button {
-    background-color: red;
+    background-color: #E60012;
     color: white;
     font-size: 18px;
     padding: 12px 20px;
@@ -290,3 +300,122 @@ body {
     height: auto;
     border-radius: 10px;
 }
+/* Estilo para el enlace "Read more" */
+.link {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.link i {
+    font-size: 12px;
+}
+
+/* Ocultar el texto completo inicialmente */
+#full-text {
+    display: none;
+}
+
+/*                                                      New Section */
+/* Estilos para la nueva sección */
+.new-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 30px 15%;
+    background-color: white;
+}
+
+/* Estilos para el rectángulo izquierdo (ESRB rating) */
+.esrb-outer {
+    background-color: #F8F8F8; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px 40px; /* Espacio interno */
+    flex: 1;
+}
+
+.esrb-outer h3 {
+    font-size: 15px;
+    text-align: center;
+    color: #6C6C6C;
+    margin-bottom: 20px;
+}
+
+.esrb-rating .esrb-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.esrb-rating .esrb-image img {
+    width: 40px;
+    height: auto;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.esrb-rating .esrb-text {
+    flex: 1;
+}
+
+.esrb-rating .esrb-text p {
+    font-size: 12px;
+    color: #838383;
+    margin: 5px 0;
+}
+
+.esrb-rating .divider {
+    width: 95%;
+    height: 1px;
+    background-color: #484848;
+    margin: 5px 0;
+}
+
+/* Estilos para el rectángulo derecho (Supported play modes) */
+.play-modes {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    flex: 1;
+}
+
+.play-modes h3 {
+    font-size: 15px;
+    text-align: center;
+    color: #6C6C6C;
+    margin-bottom: 20px;
+}
+
+.play-modes .mode-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.play-modes .mode-box {
+    background-color: #484848;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+}
+
+.play-modes .mode-box img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.play-modes .mode-box p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+

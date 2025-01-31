@@ -63,9 +63,7 @@
     </header>
     
     <div class="section-container">
-        <div class="section">
             <div class="rounded-rectangle">
-            </div>
         </div>
     </div>
 
@@ -78,16 +76,17 @@
                     <p>
                         You’ve inherited your grandfather’s old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won’t be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town’s most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!
                     </p>
-                    <p>Now with Multiplayer! Invite 1-3 players to join you in the valley! Players can work together to build a thriving farm, share resources, and build relationships with townspeople or each other. As more hands are better than one, players have the option to scale profit margin on produce sold for a more challenging experience.</p>
-
-                    <a href="#" class="link">
-                        <i class="fas fa-info-circle"></i> Más información
-                    </a>
+                    <p>
+                        <span id="short-text">Now with Multiplayer! Invite 1-3 players to join you in the valley! Players ca...</span>
+                        <span id="full-text" style="display: none;">Now with Multiplayer! Invite 1-3 players to join you in the valley! Players can work together to build a thriving farm, share resources, and build relationships with townspeople or each other. As more hands are better than one, players have the option to scale profit margin on produce sold for a more challenging experience.</span>
+                        <a href="#" id="read-more" class="link">
+                            <i class="fas fa-chevron-right"></i> Read more
+                        </a>
+                    </p>
                     <p id="pmini">Software description provided by the publisher.</p>
 
                     <button class="red-button">Explore this game’s official website</button>
                 </div>
-    
                 <!-- Columna Derecha -->
                 <div class="image-column">
                     <img src="Img/stardew_valley.avif" alt="Stardew Valley" class="game-image">
@@ -95,7 +94,49 @@
             </div>
         </div>
     </div>
+    <!-- Nueva sección debajo del content-wrapper -->
+    <div class="new-section">
+        <!-- Primer rectángulo grande (ESRB rating) con marco exterior -->
+        <div class="esrb-outer">
+            <h3>ESRB rating</h3>
+            <div class="rectangle esrb-rating">
+                <div class="esrb-content">
+                    <!-- Lado izquierdo: Imagen -->
+                    <div class="esrb-image">
+                        <img src="img/esrb10.png" alt="ESRB Rating">
+                    </div>
+                    <!-- Lado derecho: Texto -->
+                    <div class="esrb-text">
+                        <p>Fantasy Violence, Use of Alcohol, Use of Tobacco, Simulated Gambling, Mild Language, Mild Blood</p>
+                        <div class="divider"></div>
+                        <p>Users Interact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     
+        <!-- Segundo rectángulo grande (Supported play modes) -->
+        <div class="rectangle play-modes">
+            <h3>Supported play modes</h3>
+            <div class="mode-container">
+                <!-- Rectángulo pequeño 1 -->
+                <div class="mode-box">
+                    <img src="img/tv.png" alt="TV Mode">
+                    <p>TV</p>
+                </div>
+                <!-- Rectángulo pequeño 2 -->
+                <div class="mode-box">
+                    <img src="img/tabletop.png" alt="Tabletop Mode">
+                    <p>Tabletop</p>
+                </div>
+                <!-- Rectángulo pequeño 3 -->
+                <div class="mode-box">
+                    <img src="img/handheld.png" alt="Handheld Mode">
+                    <p>Handheld</p>
+                </div>
+            </div>
+        </div>
+    </div>
     
 
 </body>
