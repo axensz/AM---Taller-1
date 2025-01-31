@@ -15,11 +15,20 @@
         <div class="logo-search">
             <img src="Img/logo.png" alt="Logo" class="logo">
             <div class="search-container">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor";transform: ;msFilter:;"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+                <!-- Grupo 1: Icono de búsqueda -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
+                </svg>
+            
+                <!-- Grupo 1: Input de búsqueda -->
                 <input type="text" placeholder="Search" class="search-bar">
+            
+                <!-- Grupo 2: Selector de categorías -->
                 <div class="custom-select">
                     <span id="category-label">All Categories</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor";transform: ;msFilter:;"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
                     <ul class="dropdown" id="dropdown-list">
                         <li onclick="selectCategory(this)">Games</li>
                         <li onclick="selectCategory(this)">Hardware</li>
@@ -63,26 +72,84 @@
     <header class="header-middle">
         <nav>
             <ul>
-                <li><i class="fas fa-store"></i> My Nintendo Store</li>
-                <li><i class="fas fa-gamepad"></i> Games</li>
-                <li><i class="fas fa-laptop"></i> Nintendo Switch</li>
-                <li><i class="fas fa-newspaper"></i> News & Events</li>
-                <li><i class="fas fa-play"></i> Play Nintendo</li>
-                <li><i class="fas fa-play"></i></li>
+                <li id="nintendo-store">
+                    <!-- Icono de tienda -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3 10v10h18V10l-9-7zM11 18H5v-6h6v6zm8 0h-6v-6h6v6z"></path>
+                    </svg>
+                    My Nintendo Store
+                    <!-- Icono de flecha -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v14h14V5H5zm2 3h10v2H7V8zm0 4h10v2H7v-2zm0 4h6v2H7v-2z"></path>
+                    </svg>
+                    Games
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h12v2H3zm0 4h18v2H3z"></path>
+                    </svg>
+                    Nintendo Switch
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm2 2v16h8V4H8zm2 12h4v2h-4v-2zm0-4h4v2h-4v-2zm0-4h4v2h-4V8z"></path>
+                    </svg>
+                    News & Events
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M2 6h20v2H2zm0 4h20v2H2zm0 4h20v2H2zm0 4h20v2H2z"></path>
+                    </svg>
+                    Play Nintendo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
             </ul>
         </nav>
     </header>
 
+
+
     <!-- Tercer Header -->
     <header class="header-bottom">
-        <p>
-            <i class="fas fa-truck"></i> Free shipping on orders $50 or more.
-            <span class="highlight">Restrictions apply.</span>
-            <span class="divider"></span>
-            <i class="fas fa-coins"></i> Earn My Nintendo Points on digital games
-        </p>
+        <div class="info-bar">
+            <span>
+                <!-- Icono de envío gratis -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h12v2H3zm0 4h18v2H3z"></path>
+                </svg>
+                <strong>Free Shipping</strong> on orders $50 or more. 
+                <a href="#" class="hover-link"><strong>Restrictions apply.</strong></a>
+            </span>
+            <span>
+                <!-- Icono de puntos -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm0-14c-3.309 0-6 2.691-6 6s2.691 6 6 6 6-2.691 6-6-2.691-6-6-6z"></path>
+                </svg>
+                Earn <a href="#" class="hover-link"><strong>My Nintendo Points</strong></a> on digital games.
+            </span>
+        </div>
     </header>
+
+
     
+    <!-- Seccion debajo header -->
+
     <div class="section-container">
             <div class="rounded-rectangle">
         </div>
@@ -166,7 +233,7 @@
     </div>
 
     <div class="datos">
-        <h2>parte de camilo</h2>
+        <h2></h2>
     </div>
     
     <div class="rectangle_online">

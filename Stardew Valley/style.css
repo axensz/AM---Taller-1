@@ -39,20 +39,42 @@ body {
 }
 
 /* Contenedor del buscador */
+/* Contenedor de búsqueda con línea solo abajo */
 .search-container {
     display: flex;
     align-items: center;
-    width: 400px;
-    position: relative;
-    border-bottom: 2px solid black;
-    padding: 5px 0;
+    gap: 8px;
+    border-bottom: 2px solid #434242;
+    padding: 5px 10px;
+    transition: border-color 0.3s ease;
 }
 
-/* Icono de la lupa */
-.search-container i.fa-search {
-    margin-right: 8px;
-    color: gray;
+/* Iconos y texto en color base */
+.search-container svg,
+.search-container input,
+.search-container #category-label {
+    color: #434242;
+    fill: currentColor;
+    transition: color 0.3s ease;
 }
+
+/* 🔴 Grupo 1: Cambia el color del borde inferior, el icono de búsqueda y el input */
+.search-container:hover,
+.search-container:hover .search-bar,
+.search-container:hover svg {
+    border-color: #E60012;
+    color: #E60012;
+    fill: #E60012;
+}
+
+/* 🔴 Grupo 2: Cambia el color de "All Categories" y el icono de flecha */
+.custom-select:hover #category-label,
+.custom-select:hover svg {
+    color: #E60012;
+    fill: #E60012;
+}
+
+
 
 /* Input del buscador */
 .search-bar {
@@ -155,11 +177,10 @@ body {
 }
 
 /* ─────────────── SEGUNDO HEADER ─────────────── */
+/* 🔹 Estilos generales del segundo header */
 .header-middle {
-    width: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 10px 0;
-    text-align: center;
 }
 
 .header-middle ul {
@@ -167,45 +188,97 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    font-size: 16px;
 }
 
 .header-middle li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: #434242;
-    font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-/* ─────────────── TERCER HEADER ─────────────── */
-.header-bottom {
-    width: 100%;
-    background-color: #efefef;
-    text-align: center;
-    padding: 10px 0;
+/* 🔹 Íconos dentro del segundo header */
+.header-middle li svg {
+    width: 18px;
+    height: 18px;
+    fill: #434242;
+    transition: fill 0.3s ease;
+}
+
+/* 🔴 Hover: cambia de color el texto y los íconos */
+.header-middle li:hover {
+    color: #E60012;
+}
+
+.header-middle li:hover svg {
+    fill: #E60012;
+}
+
+/* 🔥 EXCEPCIÓN: My Nintendo Store SIEMPRE EN ROJO */
+#nintendo-store {
+    color: #E60012;
     font-weight: bold;
+    border-bottom: 3px solid #E60012;  /* Barra roja debajo */
+}
+
+#nintendo-store svg {
+    fill: #E60012;
+}
+
+
+/* 🔹 Estilos generales del tercer header */
+.header-bottom {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+.header-bottom .info-bar {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.header-bottom p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: 30px;
+    font-size: 14px;
     color: #434242;
 }
 
-/* Línea divisoria */
-.divider {
-    width: 2px;
-    height: 20px;
-    background-color: black;
-    margin: 0 10px;
+/* 🔹 Iconos en el tercer header */
+.header-bottom .info-bar svg {
+    width: 18px;
+    height: 18px;
+    fill: #E60012;
+    margin-right: 5px;
+    transition: fill 0.3s ease;
 }
 
-/* Estilos para los iconos */
-.header-bottom i {
-    font-size: 16px;
+/* 🔹 Estilos del hover en enlaces */
+.header-bottom .info-bar .hover-link {
+    color: #434242;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+.header-bottom .info-bar .hover-link:hover {
+    color: #E60012;
+    text-decoration: underline;
+}
+
+/* 🔴 Hover: cambia de color el texto y los íconos */
+.header-bottom .info-bar span:hover {
+    color: #E60012;
+}
+
+.header-bottom .info-bar span:hover svg {
+    fill: #E60012;
+}
+
+/* 🔹 Negrita para los textos requeridos */
+.header-bottom .info-bar strong {
+    font-weight: bold;
+}
+
+
 
 /*                                         Contenedor general con fondo azul */
 .section-container {
@@ -478,9 +551,11 @@ body {
 /***********************************************/
 /***********************************************/
 .rectangle_online {
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 25px;
     max-width: 1200px; /* Aumenté el ancho para acomodar la imagen a la derecha */
     text-align: left;
@@ -490,36 +565,38 @@ body {
     width: 800;
 }
 
-.rectangle_online img:first-of-type {
-    width: 100px;
-    margin-bottom: 20px;
-    align-self: flex-start; /* Alinea la imagen del logo a la izquierda */
+.text-content {
+    flex: 1; /* Ocupa el espacio disponible */
+    padding-right: 20px; /* Espacio entre el texto y la imagen */
 }
 
-.rectangle_online .text-content {
-    display: flex;
-    flex-direction: column; /* Apila los elementos (p, a, button) verticalmente */
-    justify-content: flex-start;
-    flex-grow: 1; /* Esto asegura que ocupe el espacio disponible */
+.text-content img.nintendo_online {
+    width: 100px; /* Tamaño del logo de Nintendo Online */
+    margin-bottom: 20px; /* Espacio debajo del logo */
 }
 
-.rectangle_online p {
+.text-content p {
     font-size: 1rem;
     color: #666;
     margin: 10px 0;
 }
 
-.rectangle_online p a {
+.text-content p a {
     color: #e60012;
     text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid #E60012;  /* Barra roja debajo */
+
 }
 
-.rectangle_online p a:hover {
-    text-decoration: underline;
+.text-content p a:hover {
+    text-decoration: none;
+    color: darkred;
+
 }
 
-.rectangle_online button {
+.text-content button {
     background-color: #E60012;
     color: white;
     font-size: 18px;
@@ -531,8 +608,8 @@ body {
     width: fit-content;
 }
 
-.rectangle_online button:hover {
-    background-color: #cc0011;
+.text-content button:hover {
+    background-color: darkred;
 }
 
 /* Solo aplica a las imágenes dentro de 'text-content' */
