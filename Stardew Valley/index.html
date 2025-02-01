@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardew Valley</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+        <!-- Primer Header -->
+    <header class="header-top">
+        <div class="logo-search">
+            <img src="Img/logo.png" alt="Logo" class="logo">
+            <div class="search-container">
+                <!-- Grupo 1: Icono de búsqueda -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
+                </svg>
+            
+                <!-- Grupo 1: Input de búsqueda -->
+                <input type="text" placeholder="Search" class="search-bar">
+            
+                <!-- Grupo 2: Selector de categorías -->
+                <div class="custom-select">
+                    <span id="category-label">All Categories</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                    <ul class="dropdown" id="dropdown-list">
+                        <li onclick="selectCategory(this)">Games</li>   
+                        <li onclick="selectCategory(this)">Hardware</li>
+                        <li onclick="selectCategory(this)">Merchandise</li>
+                        <li onclick="selectCategory(this)">News & Events</li>
+                        <li onclick="selectCategory(this)">Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-links">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor" ;transform: ;msFilter:;">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 16h-2v-2h2v2zm.976-4.885c-.196.158-.385.309-.535.459-.408.407-.44.777-.441.793v.133h-2v-.167c0-.118.029-1.177 1.026-2.174.195-.195.437-.393.691-.599.734-.595 1.216-1.029 1.216-1.627a1.934 1.934 0 0 0-3.867.001h-2C8.066 7.765 9.831 6 12 6s3.934 1.765 3.934 3.934c0 1.597-1.179 2.55-1.958 3.181z"></path>
+                </svg> Support
+            </span>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor";transform: ;msFilter:;">
+                    <path d="M20.205 4.791a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412L12 21.414l8.207-8.207c2.354-2.353 2.355-6.049-.002-8.416z"></path>
+                </svg> Wish List
+            </span>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor";transform: ;msFilter:;">
+                    <path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z"></path>
+                    <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                    <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                </svg> Cart
+            </span>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor";transform: ;msFilter:;">
+                    <path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path>
+                </svg> Log In / Sign Up
+            </span>
+            <span>
+                <img src="Img/usa.png" alt="USA Flag" class="flag-icon">
+            </span>
+        </div>
+    </header>
+
+    <!-- Segundo Header -->
+    <header class="header-middle">
+        <nav>
+            <ul>
+                <li id="nintendo-store">
+                    <!-- Icono de tienda -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3 10v10h18V10l-9-7zM11 18H5v-6h6v6zm8 0h-6v-6h6v6z"></path>
+                    </svg>
+                    My Nintendo Store
+                    <!-- Icono de flecha -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v14h14V5H5zm2 3h10v2H7V8zm0 4h10v2H7v-2zm0 4h6v2H7v-2z"></path>
+                    </svg>
+                    Games
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h12v2H3zm0 4h18v2H3z"></path>
+                    </svg>
+                    Nintendo Switch
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm2 2v16h8V4H8zm2 12h4v2h-4v-2zm0-4h4v2h-4v-2zm0-4h4v2h-4V8z"></path>
+                    </svg>
+                    News & Events
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M2 6h20v2H2zm0 4h20v2H2zm0 4h20v2H2zm0 4h20v2H2z"></path>
+                    </svg>
+                    Play Nintendo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Tercer Header -->
+    <header class="header-bottom">
+        <div class="info-bar">
+            <span>
+                <!-- Icono de envío gratis -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h12v2H3zm0 4h18v2H3z"></path>
+                </svg>
+                <strong>Free Shipping</strong> on orders $50 or more. 
+                <a href="#" class="hover-link"><strong>Restrictions apply.</strong></a>
+            </span>
+            <span>
+                <!-- Icono de puntos -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm0-14c-3.309 0-6 2.691-6 6s2.691 6 6 6 6-2.691 6-6-2.691-6-6-6z"></path>
+                </svg>
+                Earn <a href="#" class="hover-link"><strong>My Nintendo Points</strong></a> on digital games.
+            </span>
+        </div>
+    </header>
+
+
+    
+    <!-- Seccion debajo header -->
+    <div class="section-container">
+        <div class="rounded-rectangle">
+            <img src="Img/stardew.png" alt="Stardew Valley" class="full-width-image">
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="content-box">
+            <div class="content-container">
+                <!-- Columna Izquierda -->
+                <div class="text-column">
+                    <h3>You're moving to the valley...</h3>
+                    <p>
+                        You’ve inherited your grandfather’s old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won’t be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town’s most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!
+                    </p>
+                    <p>
+                        <span id="short-text">Now with Multiplayer! Invite 1-3 players to join you in the valley! Players ca...</span>
+                        <span id="full-text" style="display: none;">Now with Multiplayer! Invite 1-3 players to join you in the valley! Players can work together to build a thriving farm, share resources, and build relationships with townspeople or each other. As more hands are better than one, players have the option to scale profit margin on produce sold for a more challenging experience.</span>
+                        <a href="#" id="read-more" class="link">
+                            <i class="fas fa-chevron-right"></i> Read more
+                        </a>
+                    </p>
+                    <p id="pmini">Software description provided by the publisher.</p>
+
+                    <button class="red-button">Explore this game’s official website</button>
+                </div>
+                <!-- Columna Derecha -->
+                <div class="image-column">
+                    <img src="Img/stardew_valley.avif" alt="Stardew Valley" class="game-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nueva sección debajo del content-wrapper -->
+    <div class="new-section">
+        <!-- Primer rectángulo grande (ESRB rating) con marco exterior -->
+        <div class="esrb-outer">
+            <h3>ESRB rating</h3>
+            <div class="rectangle esrb-rating">
+                <div class="esrb-content">
+                    <!-- Lado izquierdo: Imagen -->
+                    <div class="esrb-image">
+                        <img src="img/esrb10.png" alt="ESRB Rating">
+                    </div>
+                    <!-- Lado derecho: Texto -->
+                    <div class="esrb-text">
+                        <p>Fantasy Violence, Use of Alcohol, Use of Tobacco, Simulated Gambling, Mild Language, Mild Blood</p>
+                        <div class="divider"></div>
+                        <p>Users Interact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo rectángulo grande (Supported play modes) -->
+        <div class="rectangle play-modes">
+            <h3>Supported play modes</h3>
+            <div class="mode-container">
+                <!-- Rectángulo pequeño 1 -->
+                <div class="mode-item">
+                    <div class="mode-box">
+                        <img src="img/tv.png" alt="TV Mode">
+                    </div>
+                    <p>TV</p>
+                </div>
+                <!-- Rectángulo pequeño 2 -->
+                <div class="mode-item">
+                    <div class="mode-box">
+                        <img src="img/tabletop.png" alt="Tabletop Mode">
+                    </div>
+                    <p>Tabletop</p>
+                </div>
+                <!-- Rectángulo pequeño 3 -->
+                <div class="mode-item">
+                    <div class="mode-box">
+                        <img src="img/handheld.png" alt="Handheld Mode">
+                    </div>
+                    <p>Handheld</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="caracteristicas">
+        <!-- Fila 1: Release date -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M13 7h-2v6h6v-2h-4z"/>
+                </svg>
+                Release date
+            </div>
+            <div class="valor">October 5, 2017</div>
+        </div>
+    
+        <!-- Fila 2: No. of players -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V5h16l.002 14H4z"/>
+                    <path d="M6 7h12v2H6zm0 4h12v2H6zm0 4h6v2H6z"/>
+                </svg>
+                No. of players
+            </div>
+            <div class="valor">
+                <span class="highlight">Single System (1)</span>
+                <span class="highlight">Local wireless (1)</span> 
+                <span class="highlight">Online (1-4)</span>
+            </div>
+        </div>
+    
+        <!-- Fila 3: Genre -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M13 7h-2v6h6v-2h-4z"/>
+                </svg>
+                Genre
+            </div>
+            <div class="valor">
+                <span class="highlight">Role-playing</span>
+                <span class="highlight">Simulation</span>
+            </div>
+        </div>
+    
+        <!-- Fila 4: Publisher -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M13 7h-2v6h6v-2h-4z"/>
+                </svg>
+                Publisher
+            </div>
+            <div class="valor">
+                <span class="highlight">ConcernedApe</span>
+            </div>
+        </div>
+    
+        <!-- Fila 5: Developer -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M13 7h-2v6h6v-2h-4z"/>
+                </svg>
+                Developer
+            </div>
+            <div class="valor">
+                <span class="highlight">ConcernedApe</span>
+            </div>
+        </div>
+    
+        <!-- Fila 6: ESRB rating -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M13 7h-2v6h6v-2h-4z"/>
+                </svg>
+                ESRB rating
+            </div>
+            <div class="valor">
+                <span class="highlight">Everyone 10+</span>
+            </div>
+        </div>
+    
+        <!-- Fila 7: Supported play modes -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M13 7h-2v6h6v-2h-4z"/>
+                </svg>
+                Supported play modes
+            </div>
+            <div class="valor">TV mode, Tabletop mode, Handheld mode</div>
+        </div>
+    
+        <!-- Fila 8: Game file size -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M13 7h-2v6h6v-2h-4z"/>
+                </svg>
+                Game file size
+            </div>
+            <div class="valor">1.6 GB</div>
+        </div>
+    
+        <!-- Fila 9: Supported languages -->
+        <div class="fila">
+            <div class="titulo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M13 7h-2v6h6v-2h-4z"/>
+                </svg>
+                Supported languages
+            </div>
+            <div class="valor">English, French, German, Italian, Japanese, Korean, Portuguese, Russian, Simplified Chinese, Spanish, Traditional Chinese</div>
+        </div>
+    </div>
+
+    <div class="datos">
+        <h2></h2>
+    </div>
+    
+    <div class="rectangle_online">
+        <!--Columna izquierda-->
+        <div class="text-content">
+            <img class="nintendo_online" src="Img/nintendo-online.png" alt="nintendo-online">
+            <p><b>Play online, access classic NES™</br> and Super NES™ games, and more with a Nintendo Switch Online membership.</b></p>
+            <br><br><br><br>
+            <p>This game supports: 
+                <a href="" target="_blank">Online Play</a>
+                <a href="" target="_blank">Save Data Cloud</a>
+            </p>
+            <button type="button">Learn More</button>
+        </div>
+        <!--Columna derecha (imagen)-->
+        <div class="imagen-columna_mando">
+            <img class="mando" src="img/Pro-Controller-Hands.avif" alt="control">
+        </div>
+    </div>
+
+
+    <!--  WARNING  -->
+    <div class="warning">
+        <p>WARNING: If you have epilepsy or have had seizures or other unusual reactions to flashing lights or patterns, consult a doctor before playing video games. All users should read the Health and Safety Information available in the system settings before using this software.</br></br>
+            Nintendo Switch Online membership (sold separately) and Nintendo Account required for online play. Not available in all countries. Internet access required for online features. Terms apply. nintendo.com/switch-online</br></br>
+            
+            Stardew Valley © ConcernedApe LLC 2016-2020. All rights reserved.</p>
+    </div>
+    <!--  FOOTER  -->
+    <footer>
+        <div class="nintendo_footer">
+            <!-- Parte superior del footer (logo y redes sociales) -->
+            <div class="nintendo_footer_rojo">
+                <img class="nintendo_logo" src="Img/nintendo-logo.png" alt="Nintendo Logo">
+                <div class="redes_sociales">
+                    <!-- Iconos de redes sociales -->
+                </div>
+            </div>
+    
+            <!-- Columnas del footer -->
+            <div class="menu_footer">
+                <!-- Columna 1 -->
+                <div class="about_nintendo">
+                    <h3>About Nintendo</h3>
+                    <ul>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Corporate Social Responsibility</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Columna 2 -->
+                <div class="shop">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="">Games</a></li>
+                        <li><a href="">Hardware</a></li>
+                        <li><a href="">Merchandise</a></li>
+                        <li><a href="">Sales & deals</a></li>
+                        <li><a href="">Exclusives</a></li>
+                        <li><a href="">Online service</a></li>
+                        <li><a href="">Nintendo NY store</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Columna 3 -->
+                <div class="orders">
+                    <h3>Orders</h3>
+                    <ul>
+                        <li><a href="">Order details</a></li>
+                        <li><a href="">Shipping info</a></li>
+                        <li><a href="">Returns & exchanges</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Columna 4 -->
+                <div class="support">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="">Nintendo Switch</a></li>
+                        <li><a href="">Nintendo Account</a></li>
+                        <li><a href="">Other systems</a></li>
+                        <li><a href="">Repairs</a></li>
+                        <li><a href="">Nintendo product recycling</a></li>
+                        <li><a href="">Warranty</a></li>
+                        <li><a href="">Licensed product information</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Columna 5 -->
+                <div class="parents-community">
+                    <div class="parents">
+                        <h3>Parents</h3>
+                        <ul>
+                            <li><a href="">Info for parents</a></li>
+                            <li><a href="">Parental controls</a></li>
+                        </ul>
+                    </div>
+                    <div class="community">
+                        <h3>Community</h3>
+                        <ul>
+                            <li><a href="">Community guidelines</a></li>
+                            <li><a href="">Online safety principles</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Columna 6 -->
+                <div class="privacy-documents">
+                    <div class="privacy">
+                        <h3>Privacy</h3>
+                        <ul>
+                            <li><a href="">Privacy policy</a></li>
+                            <li><a href="">Cookies and interest-based ads</a></li>
+                        </ul>
+                    </div>
+                    <div class="documents_policies">
+                        <h3>Documents & policies</h3>
+                        <ul>
+                            <li><a href="">Health & safety precautions</a></li>
+                            <li><a href="">Wireless regulatory info</a></li>
+                            <li><a href="">Supply chain transparency</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Imagen ESRB y parte inferior del footer -->
+            <img class="esbr-footer" src="Img/esbr-footer.png" alt="imagen footer">
+            <div class="footer-inferior">
+                <p>© Nintendo. Games are property of their respective owners. Nintendo of America Inc. Headquarters are in Redmond, Washington, USA</p>
+
+                <ul><a href="">Contact Us</a></ul>
+                <ul><a href="">Website Feedback</a></ul>
+                <ul><a href="">Terms of Use</a></ul>
+                <img class="flag-icon2" src="Img/usa.png" alt="">
+                <ul><a href="">English (United States)</a></ul>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

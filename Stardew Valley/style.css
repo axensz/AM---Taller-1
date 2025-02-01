@@ -1,0 +1,880 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos generales */
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* ─────────────── PRIMER HEADER ─────────────── */
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+/* Logo y buscador */
+.logo-search {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    height: 50px;
+    margin-right: 20px; /* Eliminamos el margen derecho */
+}
+
+/* Contenedor del buscador */
+/* Contenedor de búsqueda con línea solo abajo */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #434242;
+    padding: 5px 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* Iconos y texto en color base */
+.search-container svg,
+.search-container input,
+.search-container #category-label {
+    color: #434242;
+    fill: currentColor;
+    transition: color 0.3s ease;
+}
+
+/* 🔴 Grupo 1: Cambia el color del borde inferior, el icono de búsqueda y el input */
+.search-container:hover,
+.search-container:hover .search-bar,
+.search-container:hover svg {
+    border-color: #E60012;
+    color: #E60012;
+    fill: #E60012;
+}
+
+/* 🔴 Grupo 2: Cambia el color de "All Categories" y el icono de flecha */
+.custom-select:hover #category-label,
+.custom-select:hover svg {
+    color: #E60012;
+    fill: #E60012;
+}
+
+
+
+/* Input del buscador */
+.search-bar {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 14px;
+    background: transparent;
+}
+
+/* Select personalizado */
+.custom-select {
+    position: relative; /* Para que el dropdown se posicione con respecto a este elemento */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+.custom-select i {
+    margin-left: 5px;
+}
+
+/* Dropdown oculto */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;  /* Lo coloca justo debajo del .custom-select */
+    left: 0;  /* Alinea el menú con el selector */
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+#category-label{
+    margin-right: 10px;
+    color: #434242;
+}
+
+#chevron-down{
+    color: #E60012;
+}
+
+.dropdown li {
+    padding: 8px;
+    cursor: pointer;
+    color: #434242;
+    transition: color 0.3s ease;
+}
+
+/* Color al pasar el mouse */
+.dropdown li:hover {
+    color: #E60012;
+}
+
+.dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar el dropdown cuando se haga clic */
+.dropdown.show {
+    display: block;
+}
+
+/* Estilos para la imagen de la bandera */
+.flag-icon {
+    width: 24px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción */
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+}
+
+
+/* Enlaces del primer header */
+.header-links {
+    display: flex;
+    gap: 25px;
+}
+
+/* Estilo normal para los enlaces del header */
+.header-links span {
+    color: #434242;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el icono y el texto */
+    transition: color 0.3s ease;
+}
+
+/* Color al pasar el mouse */
+.header-links span:hover {
+    color: #E60012;
+}
+
+.header-links span:hover svg {
+    fill: #E60012;
+}
+
+/* ─────────────── SEGUNDO HEADER ─────────────── */
+/* 🔹 Estilos generales del segundo header */
+.header-middle {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.header-middle ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.header-middle li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #434242;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* 🔹 Íconos dentro del segundo header */
+.header-middle li svg {
+    width: 18px;
+    height: 18px;
+    fill: #434242;
+    transition: fill 0.3s ease;
+}
+
+/* 🔴 Hover: cambia de color el texto y los íconos */
+.header-middle li:hover {
+    color: #E60012;
+}
+
+.header-middle li:hover svg {
+    fill: #E60012;
+}
+
+/* 🔥 EXCEPCIÓN: My Nintendo Store SIEMPRE EN ROJO */
+#nintendo-store {
+    color: #E60012;
+    font-weight: bold;
+    border-bottom: 3px solid #E60012;  /* Barra roja debajo */
+}
+
+#nintendo-store svg {
+    fill: #E60012;
+}
+
+
+/* 🔹                                           Estilos generales del tercer header */
+.header-bottom {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+.header-bottom .info-bar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 14px;
+    color: #434242;
+}
+
+/* 🔹 Iconos en el tercer header */
+.header-bottom .info-bar svg {
+    width: 18px;
+    height: 18px;
+    fill: #E60012;
+    margin-right: 5px;
+    transition: fill 0.3s ease;
+}
+
+/* 🔹 Estilos del hover en enlaces */
+.header-bottom .info-bar .hover-link {
+    color: #434242;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-bottom .info-bar .hover-link:hover {
+    color: #E60012;
+    text-decoration: underline;
+}
+
+/* 🔹 Negrita para los textos requeridos */
+.header-bottom .info-bar strong {
+    font-weight: bold;
+}
+
+
+
+/*                                         Contenedor general con fondo azul */
+.section-container {
+    width: 100vw;  
+    height: 75vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d6f0fa;
+    position: relative; /* Permite que los elementos hijos usen absolute */
+    overflow: visible; /* Permite que el rectángulo sobresalga */
+}
+
+/* Rectángulo flotante */
+.rounded-rectangle {
+    width: 80vw;
+    max-width: 100%;
+    height: 540px;
+    max-height: 75vh;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -30px; /* Mueve el rectángulo hacia abajo */
+    left: 50%; /* Lo mueve al centro de la pantalla */
+    transform: translateX(-50%); /* Lo ajusta para que quede perfectamente centrado */
+}
+
+/* Estilos para la imagen que ocupa todo el contenedor */
+.full-width-image {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 100%; /* Ocupa el 100% de la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio sin distorsionarla */
+    border-radius: 20px; /* Mantiene los bordes redondeados del contenedor */
+}
+
+/* Contenedor principal con fondo blanco */
+.content-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-top: 100px; /* Espacio extra para evitar que el contenido suba demasiado */
+}
+
+
+/*                                      Contenedor interno con dos columnas */
+.content-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 100%;
+    gap: 20px; /* Espacio entre columnas */
+    min-height: 350px; /* Ajusta este valor según lo que necesites */
+}
+
+/* Columna izquierda: Texto, enlace y botón */
+.text-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 200px;
+    min-height: 250px; /* Ajusta según el tamaño de tu contenido */
+    overflow: hidden;
+}
+
+/* Titulo */
+.text-column h3 {
+    font-size: 27px;
+}
+
+/* Texto */
+.text-column p {
+    font-size: 14px;
+    color: #333;
+}
+
+.text-column #pmini {
+    font-size: 13px;
+    color: #484848;
+}
+
+/* Estilo del enlace */
+.link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+/* Botón rojo */
+.red-button {
+    background-color: #E60012;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.red-button:hover {
+    background-color: darkred;
+}
+
+/* Columna derecha: Imagen */
+.image-column {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;;
+}
+
+/* Imagen */
+.game-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Estilo para el enlace "Read more" */
+.link {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.link i {
+    font-size: 12px;
+}
+
+/* Ocultar el texto completo inicialmente */
+#full-text {
+    display: none;
+}
+
+/*                                                      New Section */
+.new-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px 15%;
+    background-color: white;
+}
+
+/* Estilos para el rectángulo izquierdo (ESRB rating) */
+.esrb-outer {
+    background-color: #F8F8F8; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    flex: 1;
+}
+
+.esrb-outer h3 {
+    font-size: 15px;
+    text-align: center;
+    color: #6C6C6C;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el rectángulo interno (esrb-rating) */
+.esrb-rating {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.esrb-rating .esrb-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.esrb-rating .esrb-image img {
+    width: 40px;
+    height: auto;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.esrb-rating .esrb-text {
+    flex: 1;
+}
+
+.esrb-rating .esrb-text p {
+    font-size: 12px;
+    color: #838383;
+    margin: 5px 0;
+}
+
+.esrb-rating .divider {
+    width: 95%;
+    height: 1px;
+    background-color: #484848;
+    margin: 5px 0;
+}
+
+/* Estilos para el rectángulo derecho (Supported play modes) */
+.play-modes {
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    padding: 20px 30px;
+    flex: 1;
+}
+
+.play-modes h3 {
+    font-size: 15px;
+    text-align: center;
+    color: #6C6C6C;
+    margin-bottom: 20px;
+}
+
+.play-modes .mode-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.play-modes .mode-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.play-modes .mode-box {
+    background-color: #484848;
+    border-radius: 8px;
+    padding: 10px 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.play-modes .mode-box img {
+    width: 80px;
+    height: auto;
+}
+
+.play-modes .mode-item p {
+    font-size: 14px;
+    color: #484848;
+    margin: 0;
+    text-align: center;
+}
+
+/***********************************************/
+/***********************************************/
+/* parte de camilo/
+/***********************************************/
+/***********************************************/
+
+.caracteristicas {
+    width: 80%; /* Ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 5%;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* Línea divisora */
+    padding: 10px 0; /* Espaciado interno */
+    margin-left: 10%;
+}
+
+.fila:last-child {
+    border-bottom: none; /* Eliminar la línea de la última fila */
+}
+
+.titulo {
+    width: 40%; /* Ancho de la columna de títulos */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    font-size: 20px;
+    color: #0e0d0d;
+}
+
+.valor {
+    width: 60%; /* Ancho de la columna de valores */
+    font-size: 18px;
+    color: #5e5e5e;
+}
+
+/* Estilos para los íconos */
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: #000000; /* Color del ícono */
+}
+
+/* Estilos para los textos resaltados */
+.highlight {
+    color: #E60012; /* Color rojo */
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Posición de la barra */
+    width: 100%;
+    height: 2px;
+    background-color: #E60012; /* Color de la barra */
+    transition: background-color 0.3s ease, height 0.3s ease; /* Animación */
+}
+
+/* Cambios al hacer hover */
+.highlight:hover::after {
+    background-color: darkred; /* Cambia el color de la barra al hacer hover */
+    height: 3px; /* Aumenta el grosor de la barra al hacer hover */
+}
+
+/***********************************************/
+/***********************************************/
+/*Estilos para el rectangulo "rectangle online"*/
+/***********************************************/
+/***********************************************/
+.rectangle_online {
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 1200px; /* Aumenté el ancho para acomodar la imagen a la derecha */
+    text-align: left;
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al principio del eje transversal (arriba) */
+    width: 1000px;
+}
+
+.text-content {
+    flex: 1; /* Ocupa el espacio disponible */
+    padding-right: 20px; /* Espacio entre el texto y la imagen */
+}
+
+.text-content img.nintendo_online {
+    width: 100px; /* Tamaño del logo de Nintendo Online */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+.text-content p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.text-content p a {
+    color: #e60012;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid #E60012;  /* Barra roja debajo */
+
+}
+
+.text-content p a:hover {
+    text-decoration: none;
+    color: darkred;
+
+}
+
+.text-content button {
+    background-color: #E60012;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.text-content button:hover {
+    background-color: darkred;
+}
+
+/* Solo aplica a las imágenes dentro de 'text-content' */
+.rectangle_online .text-content img {
+    width: 250px;
+    align-self: flex-start;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.rectangle_online .imagen-columna_mando .mando {
+    width: 500px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+
+/***********************************************/
+/***********************************************/
+/***********    Estilos Warning    **************/
+/***********************************************/
+/***********************************************/
+
+.warning {
+    color:#838383;
+    font-size: 12px;
+    width: 1200px;
+    padding: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+
+/***********************************************/
+/***********************************************/
+/***********    Estilos Footer    **************/
+/***********************************************/
+/***********************************************/
+/* Estilos para el footer */
+footer {
+    background-color: #f2f2f2;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nintendo_footer_rojo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E60012;
+    margin: 0;
+    width: 100%;
+}
+
+.nintendo_footer_rojo .nintendo_logo {
+    height: 100px;
+}
+
+.redes_sociales {
+    display: flex;
+    gap: 15px;
+}
+
+.redes_sociales svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: fill 0.3s ease;
+}
+
+.redes_sociales svg:hover {
+    fill: #ffcc00; /* Cambia el color al pasar el mouse */
+}
+
+.menu_footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding: 20px 100px;
+}
+
+.menu_footer > div {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    text-align: left;
+}
+
+.menu_footer h3 {
+    color: #434242;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.menu_footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu_footer ul li {
+    margin-bottom: 8px;
+}
+
+.menu_footer a {
+    color: #e60012;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu_footer a:hover {
+    color: #b3000e;
+    text-decoration: underline;
+}
+
+/* Estilos para las columnas con dos títulos */
+.parents-community,
+.privacy-documents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Imagen ESRB */
+.esbr-footer {
+    width: 60px;
+    float: right;
+    margin: 20px 120px;
+}
+
+/* Parte inferior del footer */
+.footer-inferior {
+    background-color: #333;
+    color: #ddd;
+    padding: 10px;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-inferior p {
+    margin: 0;
+}
+
+.footer-inferior ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-inferior ul a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.footer-inferior ul a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para las columnas con barras verticales */
+.menu_footer > div {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    text-align: left;
+    position: relative; /* Necesario para posicionar la barra */
+}
+
+/* Barra vertical gris */
+.menu_footer > div:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: 0; /* Posición a la izquierda de la columna */
+    top: 0;
+    bottom: 0;
+    width: 1px; /* Grosor de la barra */
+    background-color: #ccc; /* Color gris */
+}
+
+/* Ajustar el padding para evitar que la barra se superponga al contenido */
+.menu_footer > div:not(:first-child) {
+    padding-left: 20px; /* Espacio para la barra */
+}
+
+/*Bandera footer*/
+.flag-icon2 {
+    width: 24px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción */
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+    margin-right: -100px;
+}
